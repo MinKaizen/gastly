@@ -13,6 +13,8 @@
     "build": "tsup src/app.ts --format cjs,esm --dts --clean",
     "watch": "pnpm run build -- --watch src",
     "prepublishOnly": "pnpm run build",
+    "push": "pnpm build && clasp push",
+    "pull": "clasp pull",
     "prepare": "husky"
   },
   "author": "minkaizen",
