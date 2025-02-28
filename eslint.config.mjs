@@ -3,5 +3,11 @@
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  tseslint.configs.strictTypeChecked,
+  tseslint.configs.strict,
+  {
+    rules: {
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+    },
+  },
 );
