@@ -13,8 +13,8 @@
     "build": "eslint && tsc",
     "watch": "eslint && tsc --watch",
     "prepublishOnly": "pnpm run build",
-    "push": "pnpm build && clasp -P dist/ push",
-    "pull": "clasp -P dist/ pull",
+    "push": "pnpm build && clasp push",
+    "pull": "clasp pull",
     "prepare": "husky"
   },
   "author": "minkaizen",
