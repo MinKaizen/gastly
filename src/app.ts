@@ -5,5 +5,9 @@ function onOpen(): void {
 }
 
 function hello(): void {
-  Browser.msgBox('Hello world!')
+  const activeRange = SpreadsheetApp.getActiveRange()
+  const table = new Table(activeRange)
+  Browser.msgBox(JSON.stringify({
+    headers: table.headers.getA1Notation()
+  }))
 }
