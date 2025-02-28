@@ -1,0 +1,18 @@
+{
+    "[typescript]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    },
+    "[js]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    },
+    // allow autocomplete for ArkType expressions like "string | num"
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    // prioritize ArkType's "type" for autoimports
+    "typescript.preferences.autoImportSpecifierExcludeRegexes": [
+        "^(node:)?os$"
+    ],
+}
