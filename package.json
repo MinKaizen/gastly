@@ -10,11 +10,11 @@
     }
   },
   "scripts": {
-    "build": "tsup src/app.ts --format cjs,esm --dts --clean",
-    "watch": "pnpm run build -- --watch src",
+    "build": "eslint && tsc",
+    "watch": "eslint && tsc --watch",
     "prepublishOnly": "pnpm run build",
-    "push": "pnpm build && clasp push",
-    "pull": "clasp pull",
+    "push": "pnpm build && clasp -P dist/ push",
+    "pull": "clasp -P dist/ pull",
     "prepare": "husky"
   },
   "author": "minkaizen",
@@ -23,7 +23,6 @@
   "devDependencies": {
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
-    "@eslint/js": "^9.21.0",
     "@google/clasp": "^2.5.0",
     "@types/google-apps-script": "^1.0.97",
     "husky": "^9.1.7",
