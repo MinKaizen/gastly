@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
-      "target": "ESNext",
-      "module": "ESNext",
+      "target": "ES5",
+      "module": "none",
+      "outFile": "dist/app.js",
       "moduleResolution": "Node",
       "strict": true,
       "esModuleInterop": true,
@@ -9,7 +10,6 @@
       "skipLibCheck": true,
       "outDir": "dist",
       "rootDir": "src",
-      "resolveJsonModule": true,
       "sourceMap": false,
       "declaration": false,
       "declarationMap": false,
@@ -18,7 +18,7 @@
       "noUnusedParameters": true,
       "noFallthroughCasesInSwitch": true
     },
-    "include": ["src"],
+    "include": ["src/**/*.ts"],
     "exclude": ["node_modules", "dist"]
   }
   
