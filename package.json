@@ -11,7 +11,8 @@
   "scripts": {
     "build": "tsup src/app.ts --format cjs,esm --dts --clean",
     "watch": "pnpm run build -- --watch src",
-    "prepublishOnly": "pnpm run build"
+    "prepublishOnly": "pnpm run build",
+    "prepare": "husky"
   },
   "author": "minkaizen",
   "license": "ISC",
@@ -22,6 +23,7 @@
     "@eslint/js": "^9.21.0",
     "@google/clasp": "^2.5.0",
     "@types/google-apps-script": "^1.0.97",
+    "husky": "^9.1.7",
     "tailwindcss": "^4.0.9",
     "tsup": "^8.4.0",
     "typescript": "^5.7.3",
